@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/dinda/OneDrive/Bureau/YNOV-COURS/DEV-MOBILE/todo-list/app/src/main/res/drawable/btn_background.xml" value="0.1" />
+        <entry key="..\:/Users/dinda/OneDrive/Bureau/YNOV-COURS/DEV-MOBILE/todo-list/app/src/main/res/drawable/btn_border.xml" value="0.10572916666666667" />
+        <entry key="..\:/Users/dinda/OneDrive/Bureau/YNOV-COURS/DEV-MOBILE/todo-list/app/src/main/res/drawable/ic_add_black_24dp.xml" value="0.1" />
+        <entry key="..\:/Users/dinda/OneDrive/Bureau/YNOV-COURS/DEV-MOBILE/todo-list/app/src/main/res/layout/activity_alarm.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/dinda/OneDrive/Bureau/YNOV-COURS/DEV-MOBILE/todo-list/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/dinda/OneDrive/Bureau/YNOV-COURS/DEV-MOBILE/todo-list/app/src/main/res/layout/dialog_completed_theme.xml" value="0.22" />
+        <entry key="..\:/Users/dinda/OneDrive/Bureau/YNOV-COURS/DEV-MOBILE/todo-list/app/src/main/res/layout/fragment_calendar_view.xml" value="0.20615796519410978" />
+        <entry key="..\:/Users/dinda/OneDrive/Bureau/YNOV-COURS/DEV-MOBILE/todo-list/app/src/main/res/layout/fragment_create_task.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/dinda/OneDrive/Bureau/YNOV-COURS/DEV-MOBILE/todo-list/app/src/main/res/layout/item_task.xml" value="0.3333333333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>

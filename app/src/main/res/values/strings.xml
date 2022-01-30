@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name" >ToDoList</string>
+    <string name="delete_confirmation">Confirmation</string>
+    <string name="sureToDelete">Are you sure you want to delete the task</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+    <string name="confirmation">Tâche complétée !</string>
+    <string name="sureToMarkAsComplete">Êtes-vous sûr de vouloir supprimer cette tâche ?</string>
+    <string name="complete_task">Vous avez complété votre tâche, elle est maintenant supprimée.</string>
+</resources>
