@@ -1,16 +1,10 @@
-package com.codegama.todolistapplication.broadcastReceiver;
+package com.codegama.todolist.alarm;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.widget.Toast;
 
-import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationManagerCompat;
-import androidx.legacy.content.WakefulBroadcastReceiver;
-
-import com.codegama.todolistapplication.R;
-import com.codegama.todolistapplication.activity.AlarmActivity;
+import com.codegama.todolist.activity.AlarmActivity;
 
 public class AlarmBroadcastReceiver extends BroadcastReceiver {
 

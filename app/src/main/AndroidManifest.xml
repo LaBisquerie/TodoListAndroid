@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.codegama.todolistapplication">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.codegama.todolist">
 
     <application
-        android:name=".AppController"
+        android:name="com.codegama.todolist.AppController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.AlarmActivity"></activity>
-        <activity android:name=".activity.MainActivity">
+        <activity android:name="com.codegama.todolist.activity.AlarmActivity"></activity>
+        <activity android:name="com.codegama.todolist.activity.MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,16 +20,18 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".broadcastReceiver.AlarmBroadcastReceiver"
-            android:enabled="false">
+        <receiver android:name="com.codegama.todolist.alarm.AlarmBroadcastReceiver"
+            android:enabled="false"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"></action>
             </intent-filter>
         </receiver>
 
-        <service android:name=".broadcastReceiver.AlarmService"
+        <service android:name="com.codegama.todolist.alarm.AlarmService"
             android:enabled="true"
-            android:exported="true"/>
+            android:exported="true"
+            tools:ignore="Instantiatable" />
 
     </application>
 

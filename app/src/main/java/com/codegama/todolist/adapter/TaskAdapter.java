@@ -1,4 +1,4 @@
-package com.codegama.todolistapplication.adapter;
+package com.codegama.todolist.adapter;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -12,17 +12,15 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-import com.codegama.todolistapplication.R;
-import com.codegama.todolistapplication.activity.MainActivity;
-import com.codegama.todolistapplication.bottomSheetFragment.CreateTaskBottomSheetFragment;
-import com.codegama.todolistapplication.database.DatabaseClient;
-import com.codegama.todolistapplication.model.Task;
+import com.codegama.todolist.R;
+import com.codegama.todolist.activity.CreateTaskActivity;
+import com.codegama.todolist.activity.MainActivity;
+import com.codegama.todolist.database.DatabaseClient;
+import com.codegama.todolist.model.Task;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -41,9 +39,9 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
     public SimpleDateFormat inputDateFormat = new SimpleDateFormat("dd-M-yyyy", Locale.FRANCE);
     Date date = null;
     String outputDateString = null;
-    CreateTaskBottomSheetFragment.setRefreshListener setRefreshListener;
+    CreateTaskActivity.setRefreshListener setRefreshListener;
 
-    public TaskAdapter(MainActivity context, List<Task> taskList,  CreateTaskBottomSheetFragment.setRefreshListener setRefreshListener) {
+    public TaskAdapter(MainActivity context, List<Task> taskList,  CreateTaskActivity.setRefreshListener setRefreshListener) {
         this.context = context;
         this.taskList = taskList;
         this.setRefreshListener = setRefreshListener;
@@ -98,7 +96,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
                             .setNegativeButton(R.string.no, (dialog, which) -> dialog.cancel()).show();
                     break;
                 case R.id.menuUpdate:
-                    CreateTaskBottomSheetFragment createTaskBottomSheetFragment = new CreateTaskBottomSheetFragment();
+                    CreateTaskActivity createTaskBottomSheetFragment = new CreateTaskActivity();
                     createTaskBottomSheetFragment.setTaskId(task.getTaskId(), true, context, context);
                     createTaskBottomSheetFragment.show(context.getSupportFragmentManager(), createTaskBottomSheetFragment.getTag());
                     break;

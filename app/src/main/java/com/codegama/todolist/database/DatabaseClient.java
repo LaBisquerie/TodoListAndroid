@@ -1,4 +1,4 @@
-package com.codegama.todolistapplication.database;
+package com.codegama.todolist.database;
 
 import android.content.Context;
 

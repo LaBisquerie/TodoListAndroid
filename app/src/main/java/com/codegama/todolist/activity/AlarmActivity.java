@@ -1,21 +1,18 @@
-package com.codegama.todolistapplication.activity;
+package com.codegama.todolist.activity;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.bumptech.glide.Glide;
-import com.codegama.todolistapplication.R;
+import com.codegama.todolist.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class AlarmActivity extends BaseActivity {
+public class AlarmActivity extends AppCompatActivity {
 
     private static AlarmActivity inst;
     @BindView(R.id.title)

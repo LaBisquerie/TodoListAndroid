@@ -1,4 +1,4 @@
-package com.codegama.todolistapplication.model;
+package com.codegama.todolist.model;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

@@ -1,4 +1,4 @@
-package com.codegama.todolistapplication.database;
+package com.codegama.todolist.database;
 
 import androidx.annotation.NonNull;
 import androidx.room.Database;
@@ -6,7 +6,7 @@ import androidx.room.DatabaseConfiguration;
 import androidx.room.InvalidationTracker;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteOpenHelper;
-import com.codegama.todolistapplication.model.Task;
+import com.codegama.todolist.model.Task;
 
 @Database(entities = {Task.class}, version = 1, exportSchema = false)
 public  abstract class AppDatabase extends RoomDatabase {

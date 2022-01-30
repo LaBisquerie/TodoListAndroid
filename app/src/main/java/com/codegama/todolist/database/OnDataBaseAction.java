@@ -1,10 +1,10 @@
-package com.codegama.todolistapplication.database;
+package com.codegama.todolist.database;
 
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
 
-import com.codegama.todolistapplication.model.Task;
+import com.codegama.todolist.model.Task;
 
 import java.util.List;
 

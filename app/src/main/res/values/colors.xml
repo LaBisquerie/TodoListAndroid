@@ -3,4 +3,5 @@
     <color name="colorPrimary">#9c88ff</color>
     <color name="colorPrimaryDark">#9c88ff</color>
     <color name="myPurple">#9c88ff</color>
+    <color name="myWhite">#FFFFFF</color>
 </resources>

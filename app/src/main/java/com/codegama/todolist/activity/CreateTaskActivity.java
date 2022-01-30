@@ -1,48 +1,32 @@
-package com.codegama.todolistapplication.bottomSheetFragment;
+package com.codegama.todolist.activity;
 
 import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.TimePickerDialog;
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Build;
-import android.os.SystemClock;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
-import androidx.core.app.NotificationCompat;
 
-import com.codegama.todolistapplication.R;
-import com.codegama.todolistapplication.activity.AlarmActivity;
-import com.codegama.todolistapplication.activity.MainActivity;
-import com.codegama.todolistapplication.broadcastReceiver.AlarmBroadcastReceiver;
-import com.codegama.todolistapplication.database.DatabaseClient;
-import com.codegama.todolistapplication.model.Task;
+import com.codegama.todolist.R;
+import com.codegama.todolist.alarm.AlarmBroadcastReceiver;
+import com.codegama.todolist.database.DatabaseClient;
+import com.codegama.todolist.model.Task;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
-import com.zubair.alarmmanager.builder.AlarmBuilder;
-import com.zubair.alarmmanager.enums.AlarmType;
 
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.GregorianCalendar;
-import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -50,7 +34,7 @@ import butterknife.Unbinder;
 
 import static android.content.Context.ALARM_SERVICE;
 
-public class CreateTaskBottomSheetFragment extends BottomSheetDialogFragment {
+public class CreateTaskActivity extends BottomSheetDialogFragment {
 
     Unbinder unbinder;
     @BindView(R.id.addTaskTitle)
@@ -134,12 +118,10 @@ public class CreateTaskBottomSheetFragment extends BottomSheetDialogFragment {
 
         taskTime.setOnTouchListener((view, motionEvent) -> {
             if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
-                // Get Current Time
                 final Calendar c = Calendar.getInstance();
                 mHour = c.get(Calendar.HOUR_OF_DAY);
                 mMinute = c.get(Calendar.MINUTE);
 
-                // Launch Time Picker Dialog
                 timePickerDialog = new TimePickerDialog(getActivity(),
                         (view12, hourOfDay, minute) -> {
                             taskTime.setText(hourOfDay + ":" + minute);
@@ -153,23 +135,23 @@ public class CreateTaskBottomSheetFragment extends BottomSheetDialogFragment {
 
     public boolean validateFields() {
         if(addTaskTitle.getText().toString().equalsIgnoreCase("")) {
-            Toast.makeText(activity, "Please enter a valid title", Toast.LENGTH_SHORT).show();
+            Toast.makeText(activity, "Veuillez indiquer un titre", Toast.LENGTH_SHORT).show();
             return false;
         }
         else if(addTaskDescription.getText().toString().equalsIgnoreCase("")) {
-            Toast.makeText(activity, "Please enter a valid description", Toast.LENGTH_SHORT).show();
+            Toast.makeText(activity, "Veuillez indiquer une description", Toast.LENGTH_SHORT).show();
             return false;
         }
         else if(taskDate.getText().toString().equalsIgnoreCase("")) {
-            Toast.makeText(activity, "Please enter date", Toast.LENGTH_SHORT).show();
+            Toast.makeText(activity, "Veuillez indiquer une date", Toast.LENGTH_SHORT).show();
             return false;
         }
         else if(taskTime.getText().toString().equalsIgnoreCase("")) {
-            Toast.makeText(activity, "Please enter time", Toast.LENGTH_SHORT).show();
+            Toast.makeText(activity, "Veuillez indiquer une heure", Toast.LENGTH_SHORT).show();
             return false;
         }
         else if(taskEvent.getText().toString().equalsIgnoreCase("")) {
-            Toast.makeText(activity, "Please enter an event", Toast.LENGTH_SHORT).show();
+            Toast.makeText(activity, "Veuiller indiquer une notification", Toast.LENGTH_SHORT).show();
             return false;
         }
         else {
