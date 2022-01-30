@@ -1,15 +1,19 @@
 package com.codegama.todolist.activity;
 
 import android.content.ComponentName;
+import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -97,5 +101,26 @@ public class MainActivity extends AppCompatActivity implements CreateTaskActivit
     @Override
     public void refresh() {
         getSavedTasks();
+    }
+
+    public void onBackPressed(){
+        AlertDialog.Builder alertDialogBuilde = new AlertDialog.Builder(this);
+
+        alertDialogBuilde.setMessage("Êtes-vous sur de vouloir quitter l'application ?");
+
+        alertDialogBuilde.setCancelable(false);
+        alertDialogBuilde.setPositiveButton("Oui", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
+        alertDialogBuilde.setNegativeButton("Non", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+        AlertDialog alertDialog = alertDialogBuilde.create();
+        alertDialog.show();
     }
 }
